@@ -67,3 +67,12 @@ security:
   automountServiceAccountToken: false
   serviceAccountCreate: false
   seccompProfile: RuntimeDefault
+
+# ── Image verification (2026-08-25) ──────────────────────────────────────────
+# Resolved against the live registry over the OCI distribution API. This proves the
+# reference exists and is pullable; it does NOT prove the container behaves correctly
+# under gVisor, which needs a Linux cluster.
+image_verification:
+  checked: 2026-08-25
+  resolved: 3
+  unresolved: 0
