@@ -3,6 +3,7 @@
 # fast, and it needs the web. This is where the egress design earns its keep.
 version: 1
 eval: assistant_bench
+readiness: ready-to-pin
 runtimeClass: gvisor
 
 # ── REPLAY IS THE DEFAULT, AND THAT IS THE WHOLE POINT ───────────────────────
