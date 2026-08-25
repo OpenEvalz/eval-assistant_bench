@@ -1,0 +1,16 @@
+[project]
+name = "openevalz-eval-assistant-bench"
+version = "0.1.0"
+description = "OpenEvalz packaging of AssistantBench: Can Web Agents Solve Realistic and Time-Consuming Tasks?"
+license = { text = "BUSL-1.1" }
+requires-python = ">=3.10"
+dependencies = [
+  "inspect-ai==0.3.260",
+  "trusted-router>=0.7.0",
+  "pyyaml>=6",
+]
+
+[tool.openevalz]
+eval = "assistant_bench"
+execution_class = "sandbox-k8s"
+cost_class = "low"

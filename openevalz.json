@@ -1,0 +1,65 @@
+{
+  "openevalz_version": 1,
+  "eval": {
+    "id": "assistant_bench",
+    "slug": "assistant-bench",
+    "title": "AssistantBench: Can Web Agents Solve Realistic and Time-Consuming Tasks?",
+    "group": "Assistants",
+    "tags": [
+      "Agent"
+    ],
+    "source": "core"
+  },
+  "upstream": {
+    "repo": "https://github.com/UKGovernmentBEIS/inspect_evals",
+    "path": "src/inspect_evals/assistant_bench",
+    "inspect_ai": "0.3.260",
+    "eval_version": "5-B",
+    "dependency": ""
+  },
+  "execution": {
+    "class": "sandbox-k8s",
+    "cost_class": "low",
+    "sandbox": [
+      "solver"
+    ],
+    "requires_internet": true,
+    "fast": true,
+    "supports_k8s": true,
+    "environment": ""
+  },
+  "tasks": [
+    {
+      "name": "assistant_bench_closed_book_zero_shot",
+      "samples": 33
+    },
+    {
+      "name": "assistant_bench_closed_book_one_shot",
+      "samples": 33
+    },
+    {
+      "name": "assistant_bench_web_search_zero_shot",
+      "samples": 33
+    },
+    {
+      "name": "assistant_bench_web_search_one_shot",
+      "samples": 33
+    },
+    {
+      "name": "assistant_bench_web_browser",
+      "samples": 33
+    }
+  ],
+  "total_samples": 165,
+  "external_assets": [
+    {
+      "type": "huggingface",
+      "source": "AssistantBench/AssistantBench",
+      "state": "pinned"
+    }
+  ],
+  "scaffolds": [
+    "baseline"
+  ],
+  "generated": "2026-08-25"
+}
